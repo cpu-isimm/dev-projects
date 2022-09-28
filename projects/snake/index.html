@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+    <link rel="icon" type="image/x-icon" href="./resources/cpu new logo.png">
+   <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+    <div class="background">
+        <img src="./resources/cpu new logo.png" alt="">
+       </div>
+       <p >score : <span id="score"> 0 </span></p>
+<div class="game">
+    <div id="options">
+       
+    
+        <div id="gameSpeed">
+            <p> <span>game speed :</span><span id="speed">1</span> 
+                <div id="arrows">
+                <i class="fa-solid fa-caret-up fa-caret-up-speed"></i>
+                <i class="fa-solid fa-caret-down fa-caret-down-speed "></i>
+                </div>
+            </p>
+        </div>
+    
+        <div id="gameDifficulty">
+            <p> <span>game difficulty :</span><span id="difficulty">1</span> 
+                <div id="arrows">
+                <i class="fa-solid fa-caret-up fa-caret-up-diff"></i>
+                <i class="fa-solid fa-caret-down fa-caret-down-diff"></i>
+                </div>
+            </p>
+        </div>
+        
+        <div class="container">
+            <button class="custom-btn">pause</button>
+           </div>
+       </div>
+       
+        <div id="game-board"></div>
+        <audio src="./resources/food_G1U6tlb.mp3" id="succes" preload="auto"></audio>
+        <audio src="./resources/sound-fail-fallo.mp3" id="fail" preload="auto"></audio>
+
+    </div>
+    <script src="./js/game.js" defer type="module"></script>
+    <script src="https://kit.fontawesome.com/a1509d45ab.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>

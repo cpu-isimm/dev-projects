@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial_scale-1.0">
+        <link rel ="stylesheet" href="./style.css" />
+        <link rel="icon" href="cpu new logo.png">
+        <title>TIC TAC TOE</title>
+    </head>
+    
+    <body>
+        <div class="background">
+            <img src="cpu new logo.png" alt="">
+           </div>
+       
+        <h1>CPU ISIMM</h1>
+        <h2>Tic Tac Toe</h2>
+        <div id="grid">
+            <div id="c1" class="case"></div>
+            <div id="c2" class="case"></div>
+            <div id="c3" class="case"></div>
+            <div id="c4" class="case"></div>
+            <div id="c5" class="case"></div>
+            <div id="c6" class="case"></div>
+            <div id="c7" class="case"></div>
+            <div id="c8" class="case"></div>
+            <div id="c9" class="case"></div>
+
+        </div>
+        <p id="j-encours">c'est au tour de joueur <span id="joueur">1</span></p>
+        <div id="score">
+            <p>Score Joueur 1 : <span id="score1">0</span></p>
+            <p>Score Joueur 2 : <span id="score2">0</span></p>
+            <p>Match nuls : <span id="scoreNul">0</span></p>
+        </div>
+        <div class="container">
+            <button class="custom-btn">restart</button>
+           </div>
+
+        <audio src="success_sound_effect_aac_38552.mp4" id="succes"></audio>
+        <audio src="tick_sound_effect_hd_aac_38459.mp4" id="tik"></audio>
+
+        <script src="./app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+:root {
+    --primary: #00d9ff;
+    --secondary: #ff8800;
+    --back: #f1f1f1;
+    --action: #ff6565;
+    --border-radius: 15px;
+    --btn-padding: 10px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--back);
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50vmin;
+  }
+  
+  .score {
+    margin-top: 0;
+    margin-bottom: -26px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
+    text-align: center;
+    font-size: 35px;
+    background-color: white;
+    padding: var(--btn-padding);
+    border-radius: 15px;
+    opacity: .8;
+  }
+  
+  #reset {
+    font-size: 12px;
+    grid-column: span 2;
+    cursor: pointer;
+  }
+  
+  #reset:hover {
+    color: var(--action);
+  }
+  
+  .action {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #message {
+    font-size: 25px;
+  }
+  
+  #next {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: var(--action);
+    color: white;
+    border-radius: var(--border-radius);
+    visibility: hidden;
+    cursor: pointer;
+   
+  }
+  
+  #next.active {
+    visibility: visible;
+  }
+  
+  .jeu {
+    border-top: 1px solid black;
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 150px;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    padding: var(--btn-padding);
+  }
+  
+  .btn-joueur,
+  .btn-ordi {
+    border-radius: 15px;
+    transition: all 0.2s ease;
+    background-color: white;
+    opacity: 0.8;
+  }
+  
+  .btn-joueur {
+    cursor: pointer;
+    
+  }
+  
+  .btn-joueur:hover {
+    color: var(--primary);
+  }
+  
+  .button p {
+    margin-left: 20px;
+  }
+  
+  .button:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  .btn-joueur.desactivated {
+    background-color: var(--back);
+    cursor: default;
+  }
+  
+  .btn-joueur.desactivated:hover,
+  .btn-joueur.active {
+    color: inherit;
+  }
+  
+  .btn-joueur.active {
+    background-color: var(--primary);
+  }
+  
+  .btn-ordi.active {
+    background-color: var(--secondary);
+  }
+  .background img {
+    height:50vmin;
+    width: 110vmin; 
+  
+}
+
+.background::before {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    transform: translate(0px) scale(1.3);
+    background: linear-gradient(200deg , #19a6da , #ff8800);
+
+}
+.background {
+    z-index: -1;
+    background-color: white;
+    top: 80vmin;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+.custom-btn:hover {
+  background-position: right;
+  transition: 0.5s;
+}
+.custom-btn {
+  opacity: 0.9;
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 200px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  background-image: linear-gradient(to right  ,#19a6da , #ff8800 );
+}
